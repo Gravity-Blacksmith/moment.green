@@ -81,3 +81,48 @@ p {
     margin-left: auto;
     border: 1px #005F1A solid;
 }
+
+#mr-me {
+    margin-left: 110px;
+}
+
+#suppliers, #companies {
+    position: absolute;
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-duration: 8s; /* 4s fade in/out for each, totaling 8s cycle */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Smooth transition */
+}
+
+#suppliers {
+    animation-delay: 0s; /* Start immediately */
+}
+
+#companies {
+    animation-delay: 4s; /* Start after 4s */
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    10% {
+        display: block;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
