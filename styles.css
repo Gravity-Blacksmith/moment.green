@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 #green-blur {
+    z-index: 0;
     position: absolute;
     width:100vw;
     height: 100vw;
     background: radial-gradient(50% 50% at 50% 50%, #4AFFA2 0%, rgba(255, 255, 255, 0) 100%);    
-    top: -16%;
-    left: -10%;
+    top: -40%;
+    left: -30%;
 }
 
 #blue-blur {
-    left: 10%;
-    top: 10%;
+    z-index: 0;
+    left: 5%;
+    top: -15%;
     position: absolute;
     width:100vw;
     height: 100vw;
@@ -37,20 +39,20 @@ main {
     #green-blur {
         width:500px;
         height: 500px;
-        top: -10%;
-        left: 10%;
+        top: -190px;
+        left: -110px;
     }
     
     #blue-blur {
         width: 500px;
         height: 500px;
-        left: 25%;
-        top: 0%;
+        left: 65px;
+        top: -150px;
     } 
 }
 
 h1 {
-
+    z-index: 1;
     font-weight: 300;
     font-size: 32px;
     color: #005F1A;
@@ -59,7 +61,12 @@ h1 {
     }
 }
 
+#sentence {
+    z-index: 1;
+}
+
 #demo {
+    z-index: 1;
     background: white;
     border-radius: 5px;
     border: none;
