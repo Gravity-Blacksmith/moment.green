@@ -1,0 +1,27 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+
+const date = new Date(frontmatter.pubDate);
+const options = { year: 'numeric', month: 'long' };
+const formattedDate = date.toLocaleString('en-US', options);
+
+---
+<Layout title={frontmatter.title} >
+  <p class="desc" >{frontmatter.description}</p>
+  <p class="pub-date" >{formattedDate}</p>
+  <div class="article" >
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  .pub-date {
+    text-align: end;
+  }
+  
+  .desc {
+    text-align: center;
+    color: gray;
+  }
+</style>
